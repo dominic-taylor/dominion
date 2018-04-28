@@ -11,17 +11,17 @@
 <body>
 	<header>
 		<div class="container-fluid full-banner-ad"">
-			<div class="d-flex  justify-content-between">
-				<div class="logo-container ">
-					<img class="img-fluid" src="http://placehold.it/400x100/333333" alt="a biz logo">
-					<!-- <img class="logo" src="" alt="a biz logo"> -->
-
+			<div class="d-flex justify-content-between">
+				<div id="menu-icon"><img src="./assets/menu.svg" alt="Menu"></div>
+				<div class="logo-container">
+					<img class="img-fluid" src="http://placehold.it/400x100/333333" alt="Bizname logo">
 				</div>
 				
-				<nav class="d-flex nav">					
-					<div class="nav-container">
-						<h4>Home</h4>
-						<ul class="nav-links">
+				<nav class="d-flex nav-menu">
+					<div id="close-fullscreen"><img src="./assets/x.svg" align="CLOSE"></div>
+					<div class="dropdown-container">
+						<h4 class="nav-dropdown-btn text-align-center">Home</h4>
+						<ul class="nav-links p1">
 							<li><a href="#">Menu Item</a></li>
 							<li><a href="#">Menu Item</a></li>
 							<li><a href="#">Menu Item</a></li>
@@ -29,32 +29,34 @@
 							<li><a href="#">Menu Item</a></li>
 						</ul>
 					</div>
-					<div class="nav-container">
+					<div class="dropdown-container">
 
-						<h4>Products</h4>
-						<ul class="nav-links">
+						<h4 class="nav-dropdown-btn">Products</h4>
+						<ul class="nav-links p1">
 							<li><a href="#">Menu Item</a></li>
 							<li><a href="#">Menu Item</a></li>
 							<li><a href="#">Menu Item</a></li>
 							<li><a href="#">Menu Item</a></li>
 							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+
 						</ul>
 
 					</div>
 
-					<div class="nav-container">
-						<h4>Services</h4>
-						<ul class="nav-links">
+					<div class="dropdown-container">
+						<h4 class="nav-dropdown-btn">Services</h4>
+						<ul class="nav-links p1">
 							<li><a href="#">Menu Item</a></li>
 							<li><a href="#">Menu Item</a></li>
 							<li><a href="#">Menu Item</a></li>
-							<li><a href="#">Menu Item</a></li>
-							<li><a href="#">Menu Item</a></li>
+
 						</ul>
 					</div>
-					<div class="nav-container">
-						<h4>Help</h4>
-						<ul class="nav-links">
+						
+					<div class="dropdown-container">
+						<h4 class="nav-dropdown-btn">Help</h4>
+						<ul class="nav-links p1">
 							<li><a href="#">Menu Item</a></li>
 							<li><a href="#">Menu Item</a></li>
 							<li><a href="#">Menu Item</a></li>
@@ -63,97 +65,109 @@
 						</ul>
 					</div>
 				</nav>
-				
+
+				<div id="search-icon"><img src="./assets/search.svg" alt="Search"></div>
 			</div>
 
-			<!-- <div class="row"> -->
+		
 				<h1 class="text-align-center full-banner-text">Full Banner Ad</h1>				
-				<!-- </div> -->
+			
 			</div>
 		</header>
 
 		<main>
-			<div class="container py-5 border-bottom">
+			<div class="container py-5 ">
 				<div class="welcome-container">
 					<h2 class="text-align-center p-2">Welcome</h2>
-					<p>This is the version using Bootstrap and my own CSS.This is the version using Bootstrap and my own CSS.This is the version using Bootstrap and my own CSS.This is the version using Bootstrap and my own CSS.This is the version using Bootstrap and my own CSS.</p>
-					<form class="p-3">
+					<p>This is the version using Bootstrap and my own CSS. This is the version using Bootstrap and my own CSS. This is the version using Bootstrap and my own CSS. This is the version using Bootstrap and my own CSS. This is the version using Bootstrap and my own CSS. </p>
+					<form class="desk-search p-3">
 						<label>Search Products</label>
-						<input class="search" type="text" name="search products">	
+						<input class="search" type="text" name="search products">
+						<span><img src="./assets/search.svg" alt="search icon"></span>
 					</form>	
 				</div>
 			</div>
 		</main>
 		<section>
-			<div class="container-fluid p-5">
+			<div class="container-fluid p-5 border-top">
 				<h2 class="p-2">Featured Products</h2>
 
-				<div class="row">
-					<div class="col-md-4 p-2 px-4">
+				<div class="row mx-auto">
+					<div class="col-lg-4 p-2 px-4">
 						<div class="product-card">
 							<h5 class="card-title p-3">Product description</h5>
-							<img class="product-card-img p-3" src="http://placehold.it/300x100/333333">
-						
+							<div class="product-img-container">	
+								<img class="img-fluid p-3" src="./assets/image1.jpeg">
+							</div>
 							<div class="d-flex align-items-center  p-3">
-							<p class="product-card-text">Some example text to fill out the product-card.</p>
-							<button class="primary product-card-view ">View</button>
+							<p class="product-card-text p-1">Some example text to fill out the product-card.</p>
+							<button class="btn btn-outline-dark product-card-view ">View</button>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 p-2 px-4">
+					<div class="col-lg-4 p-2 px-4">
 						<div class="product-card">
 							<h5 class="card-title p-3">Product description</h5>
-							<img class="product-card-img p-3" src="http://placehold.it/300x100/333333">
+							<div class="product-img-container">	
+								<img class="img-fluid p-3" src="./assets/image1.jpeg">
+							</div>
 						
 							<div class="d-flex align-items-center  p-3">
-							<p class="product-card-text">Some example text to fill out the product-card.</p>
-							<button class="primary product-card-view ">View</button>
+							<p class="product-card-text p-1">Some example text to fill out the product-card.</p>
+							<button class="btn btn-outline-dark product-card-view ">View</button>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 p-2 px-4">
+					<div class="col-lg-4 p-2 px-4">
 						<div class="product-card">
 							<h5 class="card-title p-3">Product description</h5>
-							<img class="product-card-img p-3" src="http://placehold.it/300x100/333333">
+							<div class="product-img-container">	
+								<img class="img-fluid p-3" src="./assets/image1.jpeg">
+							</div>
 						
 							<div class="d-flex align-items-center  p-3">
-							<p class="product-card-text">Some example text to fill out the product-card.</p>
-							<button class="primary product-card-view ">View</button>
+							<p class="product-card-text p-1">Some example text to fill out the product-card.</p>
+							<button class="btn btn-outline-dark product-card-view ">View</button>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4 p-2 px-4">
+				
+					<div class="col-lg-4 p-2 px-4">
 						<div class="product-card">
 							<h5 class="card-title p-3">Product description</h5>
-							<img class="product-card-img p-3" src="http://placehold.it/300x100/333333">
+							<div class="product-img-container">	
+								<img class="img-fluid p-3" src="./assets/image1.jpeg">
+							</div>
 						
 							<div class="d-flex align-items-center  p-3">
-							<p class="product-card-text">Some example text to fill out the product-card.</p>
-							<button class="primary product-card-view ">View</button>
+							<p class="product-card-text p-1">Some example text to fill out the product-card.</p>
+							<button class="btn btn-outline-dark product-card-view ">View</button>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 p-2 px-4">
+					<div class="col-lg-4 p-2 px-4">
 						<div class="product-card">
 							<h5 class="card-title p-3">Product description</h5>
-							<img class="product-card-img p-3" src="http://placehold.it/300x100/333333">
+							<div class="product-img-container">	
+								<img class="img-fluid p-3" src="./assets/image1.jpeg">
+							</div>
 						
-							<div class="d-flex align-items-center  p-3">
-							<p class="product-card-text">Some example text to fill out the product-card.</p>
-							<button class="primary product-card-view ">View</button>
+							<div class="d-flex align-items-center p-3">
+							<p class="product-card-text p-1">Some example text to fill out the product-card.</p>
+							<button class="btn btn-outline-dark product-card-view ">View</button>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 p-2 px-4">
+					<div class="col-lg-4 p-2 px-4">
 						<div class="product-card">
 							<h5 class="card-title p-3">Product description</h5>
-							<img class="product-card-img p-3" src="http://placehold.it/300x100/333333">
+							<div class="product-img-container">	
+								<img class="img-fluid p-3" src="./assets/image1.jpeg">
+							</div>
 						
-							<div class="d-flex align-items-center  p-3">
-							<p class="product-card-text">Some example text to fill out the product-card.</p>
-							<button class="primary product-card-view ">View</button>
+							<div class="d-flex align-items-center p-3">
+							<p class="product-card-text p-1">Some example text to fill out the product-card.</p>
+							<button class="btn btn-outline-dark product-card-view ">View</button>
 							</div>
 						</div>
 					</div>
@@ -228,5 +242,10 @@
 				</div>
 			</div>
 		</footer>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+		<script type="text/javascript" src="./index.js"></script>
 	</body>
 	</html>

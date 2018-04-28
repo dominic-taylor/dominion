@@ -14,15 +14,22 @@ li {
 form {
 	font-size: 1.5rem;
 }
+
 .full-banner-ad{
 	height: 25rem;
 	background-color: #4caf50;
 }
-.full-banner-text {
-	margin-top: 5%;
+
+#menu-icon, #search-icon {
+	display: block;
+	padding: 1rem;
 }
 .logo-container {
-	min-width: 200px;
+	display: block;
+	margin: auto;
+	max-width: 200px;
+	max-width: 18rem;
+
 }
 .logo-container img {
 	padding: 1rem;
@@ -37,29 +44,72 @@ form {
 	border: 0;
 	border-bottom: 2px solid grey;
 }
-.nav-container {
+
+.dropdown-container {
+	margin-top: 0;
+	margin-left: auto;
+	margin-right: auto;
+
 	padding: 1rem;
 }
-.nav-links {
-	height: 0;
-	overflow: hidden;
+.nav-menu {
+	position: fixed;
+	visibility: hidden;
+	width: 100vw;
+	height: 100vh;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	z-index: 10;
 }
 
+.fullscreen {
+	background-color: red;
+	visibility: visible;
+}
+.nav-dropdown-btn {
+	display:block;
+	position: relative;
+	text-align: center;
+	min-width: 50px;
+}
+
+.nav-dropdown-btn:hover {
+	color: blue;
+	cursor: pointer;
+}
+.nav-links {
+	display: block;
+	background: #fff; 
+	visibility: hidden;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	margin: auto;
+	padding: 0.25rem;
+	overflow: hidden;
+}
+.nav-links-open {	
+	visibility: visible;
+}
+.desk-search {
+	display: none;
+}
 .product-card{
-	height: 400px;
+	height: auto;
+	max-width: 400px;
 	border-radius: 5px; 
 	border: 2px solid grey;
 }
-.product-card-img{
-	height: 200px;
+.product-img-container{
 	max-width: 100%;
 	border-radius: 2px; 
 }
+
 .product-card-text {
 	width: 70%;
 }
 .product-card-view {
-	height: 5rem;
+	height: 50px;
 	width: 30%;
 }
 .half-width-ad {
@@ -72,4 +122,36 @@ form {
 
 footer {
 	background: lightgrey;
+}
+
+
+@media (min-width: 992px) {
+
+.logo-container {
+	max-width: none;
+	margin: 0;
+}
+.desk-search {
+	display: block;
+}
+#close-fullscreen {
+	visibility: hidden;
+}
+.nav-menu {
+	height: auto;
+
+	position: relative;
+	align-content: flex-end;
+	flex-direction: row;
+	visibility: visible;
+	padding-right: 2rem;
+	width: auto;
+}
+.dropdown-container {
+	display: block;
+}
+#menu-icon, #search-icon {
+	display: none;
+}
+
 }
