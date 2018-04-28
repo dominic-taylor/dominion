@@ -20,7 +20,7 @@ form {
 	background-color: #4caf50;
 }
 
-#menu-icon, #search-icon {
+#menu-icon, #search-icon, #close-fullscreen {
 	display: block;
 	padding: 1rem;
 }
@@ -54,6 +54,7 @@ form {
 }
 .nav-menu {
 	position: fixed;
+	left: 0;
 	visibility: hidden;
 	width: 100vw;
 	height: 100vh;
@@ -81,6 +82,7 @@ form {
 	display: block;
 	background: #fff; 
 	visibility: hidden;
+	height: 0;
 	left: 0;
 	right: 0;
 	z-index: 10;
@@ -88,7 +90,8 @@ form {
 	padding: 0.25rem;
 	overflow: hidden;
 }
-.nav-links-open {	
+.nav-links-open {
+	height: auto;	
 	visibility: visible;
 }
 .desk-search {
@@ -149,6 +152,7 @@ footer {
 }
 .dropdown-container {
 	display: block;
+	height: 0;
 }
 #menu-icon, #search-icon {
 	display: none;
