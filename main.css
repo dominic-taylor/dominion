@@ -90,6 +90,7 @@ form {
 	padding: 0.25rem;
 	overflow: hidden;
 }
+
 .nav-links-open {
 	height: auto;	
 	visibility: visible;
@@ -97,7 +98,17 @@ form {
 .desk-search {
 	display: none;
 }
+.slider-section {
+	padding-left: 0;
+	padding-right: 0;
+}
+.slider {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+}
 .product-card{
+	 flex-shrink: 0;
 	height: auto;
 	max-width: 400px;
 	border-radius: 5px; 
@@ -157,5 +168,11 @@ footer {
 #menu-icon, #search-icon {
 	display: none;
 }
-
+.slider-section {
+	padding: 3rem;
+}
+.slider {
+	flex-wrap: wrap;
+	overflow-x: hidden;
+}
 }
