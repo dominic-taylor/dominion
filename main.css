@@ -99,16 +99,47 @@ form {
 	display: none;
 }
 .slider-section {
-	padding-left: 0;
-	padding-right: 0;
+	min-height: 500px;
+/*	padding-left: 0;
+	padding-right: 0;*/
+	position: relative;
 }
 .slider {
+	display: block;
+	position: relative;
+}
+
+.slider-buttons {
 	display: flex;
-	flex-wrap: nowrap;
-	overflow-x: auto;
+	position: absolute;
+	bottom: 0;
+	justify-content: space-around;
+	width: 100%;
+}
+.slider-buttons button {
+	border: 2px solid black;
+	z-index: 1;
+}
+.slider-indicators {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+.indicator {
+	transition: opacity 0.5s;
+	opacity: 0;
+}
+.current {
+	opacity: 1;
 }
 .product-card{
-	 flex-shrink: 0;
+	position: absolute;
+	display: inline-block;
+	opacity: 0;
+	transition: opacity 0.5s;
+	flex-shrink: 0;
 	height: auto;
 	max-width: 400px;
 	border-radius: 5px; 
@@ -126,6 +157,10 @@ form {
 	height: 50px;
 	width: 30%;
 }
+.active {
+		opacity: 1;
+}
+
 .half-width-ad {
 	width: 100%;
 	height: 20rem;
@@ -153,7 +188,6 @@ footer {
 }
 .nav-menu {
 	height: auto;
-
 	position: relative;
 	align-content: flex-end;
 	flex-direction: row;
@@ -172,7 +206,16 @@ footer {
 	padding: 3rem;
 }
 .slider {
+	display: flex;
 	flex-wrap: wrap;
 	overflow-x: hidden;
+}
+.slider-buttons, .slider-indicators, .indicator {
+	display: none;
+}
+.product-card {
+	position: initial;
+	opacity: 1;
+
 }
 }

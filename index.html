@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="./main.css">
 
-	<link rel="stylesheet" type="text/css" href="./caro.css">
+	<!-- <link rel="stylesheet" type="text/css" href="./caro.css"> -->
 	<title>Dominic's Dominion test site</title>
 </head>
 <body>
@@ -181,7 +181,7 @@
 
 			<div class="slider justify-content-around mx-auto ">
 				
-					<div class="product-card m-2 px-4">
+					<div class="product-card m-2 px-4 active">
 						<h5 class="card-title p-3">Product description</h5>
 						<div class="product-img-container">	
 							<img class="img-fluid p-3" src="./assets/image1.jpeg">
@@ -256,78 +256,19 @@
 						</div>
 					</div>
 			</div>
+			<div class="slider-buttons">
+				<button id="prev-button">Prev</button><button id="next-button">Next</button>
+			</div>
+			  <div class="slider-indicators d-flex justify-content-center ">
+			    <span class="indicator current">1</span>
+			    <span class="indicator">2</span>
+			    <span class="indicator">3</span>
+			    <span class="indicator">4</span>
+			    <span class="indicator">5</span>
+			    <span class="indicator">6</span>
+			  </div>
 	</section>
-<!-- 	 
-bootstrap carosel
 
-<section>
-		<div class="container">
-			<h2 class="p-2">Featured Products</h2>
-			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="">
-				<ol class="carousel-indicators">
-					<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-					<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-				</ol>
-				<div class="carousel-inner row w-100 mx-auto">
-
-					<div class="carousel-item active">
-						
-							<div class="product-card m-2 px-4">
-								<h5 class="card-title p-3">Product description</h5>
-								<div class="product-img-container">	
-									<img class="img-fluid p-3" src="./assets/image1.jpeg">
-								</div>
-
-								<div class="d-flex align-items-center p-3">
-									<p class="product-card-text p-1">Some example text to fill out the product-card.</p>
-									<button class="btn btn-outline-dark product-card-view ">View</button>
-								</div>
-							</div>
-					
-					</div>
-					<div class="carousel-item">
-						
-							<div class="product-card">
-								<h5 class="card-title p-3">Product description</h5>
-								<div class="product-img-container">	
-									<img class="img-fluid p-3" src="./assets/image2.jpeg">
-								</div>
-								
-								<div class="d-flex align-items-center p-3">
-									<p class="product-card-text p-1">Some example text to fill out the product-card.</p>
-									<button class="btn btn-outline-dark product-card-view ">View</button>
-								</div>
-							</div>
-										
-					</div>
-						<div class="carousel-item">
-							
-								<div class="product-card">
-									<h5 class="card-title p-3">Product description</h5>
-									<div class="product-img-container">	
-										<img class="img-fluid p-3" src="./assets/image3.jpeg">
-									</div>
-
-									<div class="d-flex align-items-center p-3">
-										<p class="product-card-text p-1">Some example text to fill out the product-card.</p>
-										<button class="btn btn-outline-dark product-card-view ">View</button>
-									</div>
-								</div>
-											
-						</div>
-						</div>
-						<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-							<span class="carousel-control-prev-icon carousel-control" aria-hidden="true"></span>
-							<span class="sr-only">Previous</span>
-						</a>
-						<a class="carousel-control-next carousel-control" href="#carouselExampleIndicators" role="button" data-slide="next">
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
-							<span class="sr-only">Next</span>
-						</a>
-					</div>
-				</div>
-			</section>  -->
 			<section>
 				<div class="container-fluid">
 					<div class="row py-5">
