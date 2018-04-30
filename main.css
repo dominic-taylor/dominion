@@ -17,7 +17,7 @@ form {
 
 .full-banner-ad{
 	height: 25rem;
-	background-color: #4caf50;
+	background-color: #EFEFEF;
 }
 
 #menu-icon, #search-icon, #close-fullscreen {
@@ -50,22 +50,26 @@ form {
 	margin-left: auto;
 	margin-right: auto;
 
-	padding: 1rem;
+	padding: 1rem 0;
 }
 .nav-menu {
 	position: fixed;
 	left: 0;
 	visibility: hidden;
+	opacity: 0;
 	width: 100vw;
 	height: 100vh;
 	flex-direction: column;
 	flex-wrap: nowrap;
 	z-index: 10;
+	transition: opacity 0.5s;
 }
 
 .fullscreen {
-	background-color: red;
+	background-color: #607d8b;
 	visibility: visible;
+	transition: opacity 0.5s;
+	opacity: 1;
 }
 .nav-dropdown-btn {
 	display:block;
@@ -75,33 +79,36 @@ form {
 }
 
 .nav-dropdown-btn:hover {
-	color: blue;
+	color: #FF383F;
 	cursor: pointer;
 }
 .nav-links {
 	display: block;
-	background: #fff; 
-	visibility: hidden;
-	height: 0;
+	background: #A9A9A9; 
+	background: #CAEBF2;
+	width: 100vw;
 	left: 0;
 	right: 0;
 	z-index: 10;
 	margin: auto;
-	padding: 0.25rem;
 	overflow: hidden;
+	text-align: center;
+    max-height: 0;
+    transition: max-height 0.35s ease-in;
+}
+.nav-links li {
+	margin: 1rem;
 }
 
 .nav-links-open {
-	height: auto;	
-	visibility: visible;
+  max-height: 400px;
+  transition: max-height 0.35s ease-in;
 }
 .desk-search {
 	display: none;
 }
 .slider-section {
 	min-height: 500px;
-/*	padding-left: 0;
-	padding-right: 0;*/
 	position: relative;
 }
 .slider {
@@ -111,13 +118,15 @@ form {
 
 .slider-buttons {
 	display: flex;
-	position: absolute;
-	bottom: 0;
 	justify-content: space-around;
+	position: absolute;
+	left: 0;
+	bottom: 0;
 	width: 100%;
 }
 .slider-buttons button {
-	border: 2px solid black;
+	border: none;
+	background: #fff;
 	z-index: 1;
 }
 .slider-indicators {
@@ -134,9 +143,12 @@ form {
 .current {
 	opacity: 1;
 }
-.product-card{
-	position: absolute;
+.product-card {
 	display: inline-block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto; 
 	opacity: 0;
 	transition: opacity 0.5s;
 	flex-shrink: 0;
@@ -164,13 +176,13 @@ form {
 .half-width-ad {
 	width: 100%;
 	height: 20rem;
-	background-color: #4caf50;
+	background-color: #efefef;
 	border-radius: 5px; 
 	border: 2px solid grey;
 }
 
 footer {
-	background: lightgrey;
+	background: #efefef;
 }
 
 
@@ -182,6 +194,7 @@ footer {
 }
 .desk-search {
 	display: block;
+	text-align: center;
 }
 #close-fullscreen {
 	visibility: hidden;
@@ -192,12 +205,16 @@ footer {
 	align-content: flex-end;
 	flex-direction: row;
 	visibility: visible;
+	opacity: 1;
 	padding-right: 2rem;
-	width: auto;
+	width: 50%;
 }
 .dropdown-container {
 	display: block;
 	height: 0;
+}
+.nav-links {
+	width: auto;
 }
 #menu-icon, #search-icon {
 	display: none;
@@ -216,6 +233,7 @@ footer {
 .product-card {
 	position: initial;
 	opacity: 1;
+	margin: 1rem;
 
 }
 }
