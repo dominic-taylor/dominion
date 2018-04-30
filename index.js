@@ -1,5 +1,3 @@
-
-
 document.getElementById('menu-icon').addEventListener('click', function() {
 	toggleFullScreenNav();
 });
@@ -7,95 +5,81 @@ document.getElementById('menu-icon').addEventListener('click', function() {
 document.getElementById('close-fullscreen').addEventListener('click', function() {
 	toggleFullScreenNav();
 });
+document.getElementById('next-button').addEventListener('click', function() {
+	navigateRight();
+});
 
-let navDropdown = document.getElementsByClassName('nav-dropdown-btn');
-
-for (var i = navDropdown.length - 1; i >= 0; i--) {
-	navDropdown[i].addEventListener('click', toggleDropDown, false);
-}
+document.getElementById('prev-button').addEventListener('click', function() {
+	navigateLeft();
+});
 
 
-function toggleDropDown(e) {
-	e.target.nextElementSibling.classList.toggle('nav-links-open');
-}
-
-function toggleFullScreenNav(){
+const toggleFullScreenNav = () => {
 	let nav = document.getElementsByClassName('nav-menu')[0];
-
 	if (nav.classList.contains('fullscreen')) {
-		let navLinks = document.getElementsByClassName('nav-links');
-		for (var i = navLinks.length - 1; i >= 0; i--) {
-			if(navLinks[i].classList.contains('nav-links-open')){
-				navLinks[i].classList.remove('nav-links-open');
-			}
-		}
+		closeNavLinks();
 		nav.classList.remove('fullscreen');
 	}else{
 		nav.classList.add('fullscreen');
 	}
-
+}
+const closeNavLinks = () => {
+	let navLinks = document.getElementsByClassName('nav-links');
+	for (var i = navLinks.length - 1; i >= 0; i--) {
+		if(navLinks[i].classList.contains('nav-links-open')){
+			navLinks[i].classList.remove('nav-links-open');
+		}
+	}
 }
 
+const toggleDropDown = (e) => {
+	e.target.nextElementSibling.classList.toggle('nav-links-open');
+};
 
-document.getElementById('next-button').addEventListener('click', function() {
-    navigate(1);
-  });
+const attachDropdownListeners = () =>{
+	let navDropdown = document.getElementsByClassName('nav-dropdown-btn');
+	for (var i = navDropdown.length - 1; i >= 0; i--) {
+		navDropdown[i].addEventListener('click', toggleDropDown, false);
+	}
+};
+attachDropdownListeners();
 
-document.getElementById('prev-button').addEventListener('click', function() {
-    navigate(-1);
-  });
 
-function navigate(direction) {
-	let sliderItems = document.getElementsByClassName('product-card');
+const navigateRight = () => {
+	let slides = document.getElementsByClassName('product-card');
 	let indicators = document.getElementsByClassName('indicator');
 	let current = document.getElementsByClassName('active')[0];
-	// if(current == sliderItems[0] && direction === -1){
-	// 	// give active to last element in sliderItems
-	// 	sliderItems[sliderItems.length].classList.add('active');
 
-	// loop thru sliderItems
-	// if sliderItems[i] contains active, check if last or first, remove active
-	// 	pass current to inidicator with same index. 
-	if (direction === -1) {
-		for (var i = sliderItems.length - 1; i >= 0; i--) {
-			if(sliderItems[i].classList.contains('active') ){
-				sliderItems[i].classList.remove('active');		
-				indicators[i].classList.remove('current');
-				if(i === 0){
-					i = sliderItems.length-1;
-				}else{
-					i = i-1;
-				}
-				indicators[i].classList.add('current');
-				sliderItems[i].classList.add('active');
-				break;
-			}
-		}
-	}
-	if (direction === 1) {
-		for (var i = sliderItems.length - 1; i >= 0; i--) {
-			if(sliderItems[i].classList.contains('active') ){
-				sliderItems[i].classList.remove('active');			
-				indicators[i].classList.remove('current');
-				if(i === sliderItems.length-1){
-					i = 0;
-				}else{
-					i = i+1;
-				}
-				indicators[i].classList.add('current');
-				sliderItems[i].classList.add('active');
-				break;
-			}
+	for (var i = slides.length - 1; i >= 0; i--) {
+		if(slides[i].classList.contains('active') ){
+			slideOut(slides[i], indicators[i]);
+			i === slides.length-1 ? i = 0 : i = i+1;
+			slideIn(slides[i], indicators[i]);
+			break;
 		}
 	}
 }
+const navigateLeft = () => {
+	let slides = document.getElementsByClassName('product-card');
+	let indicators = document.getElementsByClassName('indicator');
+	let current = document.getElementsByClassName('active')[0];
 
-function slide(current, index) {
-		console.log('slide', current.previousElementSibling)
-		let indicators = document.getElementsByClassName('indicator');
-
-	current.classList.remove('active')			
-	indicators[index].classList.remove('current')
-	indicators[index].previousElementSibling.classList.add('current')
-	current.previousElementSibling.classList.add('active')
+	for (var i = slides.length - 1; i >= 0; i--) {
+		if(slides[i].classList.contains('active') ){
+			slideOut(slides[i], indicators[i]);
+			i === 0 ? i = slides.length-1 : i = i-1;
+			slideIn(slides[i], indicators[i]);
+			break;
+		}
+	}
 }
+const slideOut = (slider, indicator)  => {
+	slider.classList.remove('active');			
+	indicator.classList.remove('current');
+}
+
+const slideIn = (slider, indicator) => {
+	slider.classList.add('active');
+	indicator.classList.add('current');
+}
+
