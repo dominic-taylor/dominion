@@ -20,8 +20,11 @@ form {
 	background-color: #EFEFEF;
 }
 
-#menu-icon, #search-icon, #close-fullscreen {
-	display: block;
+/*#menu-icon, #search-icon, #close-fullscreen, #close-search, #search-open {
+
+}*/
+.icon {
+		display: block;
 	padding: 1rem;
 }
 .logo-container {
@@ -64,7 +67,18 @@ form {
 	z-index: 10;
 	transition: opacity 0.5s;
 }
-
+.search-screen{
+	position: fixed;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    z-index: 10;
+    transition: opacity 0.5s;
+}
 .fullscreen {
 	background-color: #9E9E9E;
 	visibility: visible;
@@ -104,6 +118,7 @@ form {
   max-height: 400px;
   transition: max-height 0.35s ease-in;
 }
+
 .desk-search {
 	display: none;
 }
@@ -227,7 +242,10 @@ footer {
 .nav-links {
 	width: auto;
 }
-#menu-icon, #search-icon {
+#menu-icon, #search-icon, #search-open {
+	display: none;
+}
+.search-screen {
 	display: none;
 }
 .featured-text {

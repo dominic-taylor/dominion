@@ -5,6 +5,14 @@ document.getElementById('menu-icon').addEventListener('click', function() {
 document.getElementById('close-fullscreen').addEventListener('click', function() {
 	toggleFullScreenNav();
 });
+
+document.getElementById('search-open').addEventListener('click', function() {
+	toggleFullScreenSearch();
+});
+document.getElementById('close-search').addEventListener('click', function() {
+	toggleFullScreenSearch();
+});
+
 document.getElementById('next-button').addEventListener('click', function() {
 	navigateRight();
 });
@@ -31,7 +39,14 @@ const closeNavLinks = () => {
 		}
 	}
 }
-
+const toggleFullScreenSearch = () => {
+	let search = document.getElementsByClassName('search-screen')[0];
+	if (search.classList.contains('fullscreen')) {
+		search.classList.remove('fullscreen');
+	}else{
+		search.classList.add('fullscreen');
+	}
+}
 const toggleDropDown = (e) => {
 	e.target.nextElementSibling.classList.toggle('nav-links-open');
 };

@@ -11,13 +11,20 @@
 	<header>
 		<div class="container-fluid full-banner-ad"">
 			<div class="d-flex justify-content-between">
-				<div id="menu-icon"><img src="./assets/menu.svg" alt="Menu"></div>
+				<div id="menu-icon" class="icon"><img src="./assets/menu.svg" alt="Menu"></div>
 				<div class="logo-container">
 					<img class="img-fluid" src="http://placehold.it/400x100/333333" alt="Bizname logo">
 				</div>
-				
+				<div class="search-screen">
+				<div id="close-search" class="icon"><img src="./assets/x.svg" alt="CLOSE"></div>
+					<form class="p-3">
+					<label>Search</label>
+					<input class="search" type="text" name="search products">
+					<span><img src="./assets/search.svg" alt="search icon"></span>
+				</form>	
+				</div>
 				<nav class="d-flex nav-menu">
-					<div id="close-fullscreen"><img src="./assets/x.svg" alt="CLOSE"></div>
+					<div id="close-fullscreen" class="icon"><img src="./assets/x.svg" alt="CLOSE"></div>
 					<div class="dropdown-container">
 						<h4 class="nav-dropdown-btn text-align-center">Home</h4>
 						<ul class="nav-links p1">
@@ -67,7 +74,7 @@
 					</div>
 				</nav>
 
-				<div id="search-icon"><img src="./assets/search.svg" alt="Search"></div>
+				<div id="search-open" class="search-icon icon"><img src="./assets/search.svg" alt="Search"></div>
 			</div>
 
 
