@@ -2,112 +2,263 @@
 <html>
 <head>
 	<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Dominic's Dominion test site</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-
 	<link rel="stylesheet" type="text/css" href="./main.css">
+	<title>Dominic's Dominion test site</title>
 </head>
 <body>
-<header>
-	<div class="full-banner-ad">
-		<div class="logo-container">
-			<!-- <img src="http://placehold.it/400x100/333333" alt="a biz logo"> -->
-			<img src="" alt="a biz logo">
+	<header>
+		<div class="container-fluid full-banner-ad"">
+			<div class="d-flex justify-content-between">
+				<div id="menu-icon" class="icon"><img src="./assets/menu.svg" alt="Menu"></div>
+				<div class="logo-container">
+					<img class="img-fluid" src="http://placehold.it/400x100/333333" alt="Bizname logo">
+				</div>
+				<div class="search-screen">
+				<div id="close-search" class="icon"><img src="./assets/x.svg" alt="CLOSE"></div>
+					<form class="p-3">
+					<label>Search</label>
+					<input class="search" type="text" name="search products">
+					<span><img src="./assets/search.svg" alt="search icon"></span>
+				</form>	
+				</div>
+				<nav class="d-flex nav-menu">
+					<div id="close-fullscreen" class="icon"><img src="./assets/x.svg" alt="CLOSE"></div>
+					<div class="dropdown-container">
+						<h4 class="nav-dropdown-btn text-align-center">Home</h4>
+						<ul class="nav-links p1">
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+						</ul>
+					</div>
+					<div class="dropdown-container">
 
+						<h4 class="nav-dropdown-btn">About Us</h4>
+						<ul class="nav-links p1">
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+
+						</ul>
+
+					</div>
+
+					<div class="dropdown-container">
+						<h4 class="nav-dropdown-btn">Products</h4>
+						<ul class="nav-links p1">
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+
+						</ul>
+					</div>
+
+					<div class="dropdown-container">
+						<h4 class="nav-dropdown-btn">Help</h4>
+						<ul class="nav-links p1">
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+						</ul>
+					</div>
+				</nav>
+
+				<div id="search-open" class="search-icon icon"><img src="./assets/search.svg" alt="Search"></div>
+			</div>
+
+
+			<h1 class="text-align-center full-banner-text">Full Banner Ad</h1>				
+			
 		</div>
-		<h1 class="banner-ad-text">Full Banner Ad</h1>
-	</div>
+	</header>
 
-</header>
-<main>
-	<h2>Welcome</h2>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	<form>
-		<label>Search Products</label>
-		<input class="search" type="text" name="search products">	
-	</form>	
-</main>
-<section>
-	<h2>Featured Products</h2>
-	<div class="product-card">
-		
-	</div>
-	<div class="product-card">
-		
-	</div>
-	<div class="product-card">
-		
-	</div>
-	<div class="product-card">
-		
-	</div>
-	<div class="product-card">
-		
-	</div>
-	<div class="product-card">
-		
-	</div>
-</section>
-<section>
-	<div class="half-width-ad">
-		<h3 class="banner-ad-text">banner ad</h3>
-	</div>
-	<div class="half-width-ad">
-		<h3 class="banner-ad-text">banner ad</h3>
-	</div>
+	<main>
+		<div class="container py-5 ">
+			<div class="welcome-container">
+				<h2 class="text-align-center p-2">Welcome</h2>
+				<p>This is the test website using Bootstrap and my own CSS. This is the test website using Bootstrap and my own CSS. This is the test website using Bootstrap and my own CSS. This is the test website using Bootstrap and my own CSS. This is the test website using Bootstrap and my own CSS. </p>
+				<form class="desk-search p-3">
+					<label>Search Products</label>
+					<input class="search" type="text" name="search products">
+					<span><img src="./assets/search.svg" alt="search icon"></span>
+				</form>	
+			</div>
+		</div>
+	</main>
+	<section>
+		<div class="slider-section container-fluid border-top">
+			<h2 class="featured-text">Featured Products</h2>
 
-</section>
+			<div class="slider justify-content-around mx-auto ">
+				
+				<div class="product-card px-4 active">
+					<h5 class="card-title p-3">Product description</h5>
+					<div class="product-img-container">	
+						<img class="img-fluid p-3" src="./assets/image1.jpeg">
+					</div>
+					<div class="d-flex align-items-center  p-3">
+						<p class="product-card-text p-1">Some example text to fill out the product-card.</p>
+						<button class="btn btn-outline-dark product-card-view ">View</button>
+					</div>
+				</div>
+				
+				
+				<div class="product-card px-4">
+					<h5 class="card-title p-3">Product description</h5>
+					<div class="product-img-container">	
+						<img class="img-fluid p-3" src="./assets/image2.jpeg">
+					</div>
 
-<footer>
-	<div>
-		<h3>Home</h3>
-		<ul>
-			<li><a href="#">Menu Item</a></li>
-			<li><a href="#">Menu Item</a></li>
-			<li><a href="#">Menu Item</a></li>
-			<li><a href="#">Menu Item</a></li>
-			<li><a href="#">Menu Item</a></li>
-		</ul>
-	</div>
-	<div>
-		<h3>Products</h3>
-		<ul>
-			<li><a href="#">Menu Item</a></li>
-			<li><a href="#">Menu Item</a></li>
-			<li><a href="#">Menu Item</a></li>
-			<li><a href="#">Menu Item</a></li>
-			<li><a href="#">Menu Item</a></li>
-		</ul>
-	</div>
-	
-	<div>
-		<h3>Services</h3>
-		<ul>
-			<li><a href="#">Menu Item</a></li>
-			<li><a href="#">Menu Item</a></li>
-			<li><a href="#">Menu Item</a></li>
-			<li><a href="#">Menu Item</a></li>
-			<li><a href="#">Menu Item</a></li>
-		</ul>
-	</div>
-	<div>
-		<h3>Help</h3>
-		<ul>
-			<li><a href="#">Menu Item</a></li>
-			<li><a href="#">Menu Item</a></li>
-			<li><a href="#">Menu Item</a></li>
-			<li><a href="#">Menu Item</a></li>
-			<li><a href="#">Menu Item</a></li>
-		</ul>
-	</div>
-	
+					<div class="d-flex align-items-center  p-3">
+						<p class="product-card-text p-1">Some example text to fill out the product-card.</p>
+						<button class="btn btn-outline-dark product-card-view ">View</button>
+					</div>
+				</div>
 
-</footer>
-</body>
-</html>
+				
+				<div class="product-card px-4">
+					<h5 class="card-title p-3">Product description</h5>
+					<div class="product-img-container">	
+						<img class="img-fluid p-3" src="./assets/image3.jpeg">
+					</div>
+
+					<div class="d-flex align-items-center  p-3">
+						<p class="product-card-text p-1">Some example text to fill out the product-card.</p>
+						<button class="btn btn-outline-dark product-card-view ">View</button>
+					</div>
+				</div>
+				
+				
+
+				<div class="product-card px-4">
+					<h5 class="card-title p-3">Product description</h5>
+					<div class="product-img-container">	
+						<img class="img-fluid p-3" src="./assets/image4.jpeg">
+					</div>
+
+					<div class="d-flex align-items-center  p-3">
+						<p class="product-card-text p-1">Some example text to fill out the product-card.</p>
+						<button class="btn btn-outline-dark product-card-view ">View</button>
+					</div>
+				</div>
+
+				<div class="product-card px-4">
+					<h5 class="card-title p-3">Product description</h5>
+					<div class="product-img-container">	
+						<img class="img-fluid p-3" src="./assets/image5.jpeg">
+					</div>
+
+					<div class="d-flex align-items-center p-3">
+						<p class="product-card-text p-1">Some example text to fill out the product-card.</p>
+						<button class="btn btn-outline-dark product-card-view ">View</button>
+					</div>
+				</div>
+				
+				<div class="product-card px-4">
+					<h5 class="card-title p-3">Product description</h5>
+					<div class="product-img-container">	
+						<img class="img-fluid p-3" src="./assets/image6.jpeg">
+					</div>
+
+					<div class="d-flex align-items-center p-3">
+						<p class="product-card-text p-1">Some example text to fill out the product-card.</p>
+						<button class="btn btn-outline-dark product-card-view ">View</button>
+					</div>
+				</div>
+			</div>
+			<div class="slider-buttons">
+				<button id="prev-button"><img src="./assets/chevron-left.svg" alt="Prev"></button>
+
+				<div class="slider-indicators d-flex justify-content-center ">
+					<div class="indicator current"></div>
+					<div class="indicator"></div>
+					<div class="indicator"></div>
+					<div class="indicator"></div>
+					<div class="indicator"></div>
+					<div class="indicator"></div>
+				</div>
+				<button id="next-button"><img src="./assets/chevron-right.svg" alt="Next"></button>
+			</div>
+		</section>
+
+		<section>
+			<div class="container-fluid">
+				<div class="row py-5">
+					<div class="col-12 col-md-6 px-4 ">
+						<div class="d-flex half-width-ad justify-content-center">
+							<h3 class="align-self-center ">banner ad</h3>
+						</div>
+					</div>
+					<div class="col-12  col-md-6 px-4">
+						<div class="d-flex half-width-ad justify-content-center">
+							<h3 class="align-self-center">banner ad</h3>
+						</div>			
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<footer>
+			<div class="container py-5">
+				<div class="row">
+					<div class="col-md-3">
+						<h4>Home</h4>
+						<ul class="footer-links">
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+
+						<h4>Products</h4>
+						<ul class="footer-links">
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+						</ul>
+
+					</div>
+
+					<div class="col-md-3">
+						<h4>Services</h4>
+						<ul class="footer-links">
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<h4>Help</h4>
+						<ul class="footer-links">
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+							<li><a href="#">Menu Item</a></li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</footer>
+		<script type="text/javascript" src="./index.js"></script>
+	</body>
+	</html>
